@@ -11,9 +11,10 @@
 <meta property="og:description" content="Co-founder, CEO and Executive Director of Y Ventures Group Ltd (SGX Catalist: 1F1).">
 <meta property="og:url" content="https://lowyikjin.com/">
 <meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1f2b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23c9ad7a'%3EYJ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,11 +27,7 @@
     "alternateName": ["Alex Low", "Alex Low Yik Jin", "Yik Jin Low", "Low Yik Jin Alex"],
     "url": "https://lowyikjin.com/",
     "jobTitle": "Co-Founder, Chief Executive Officer and Executive Director",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Y Ventures Group Ltd",
-      "url": "https://yventures.com.sg/"
-    },
+    "worksFor": {"@type": "Organization", "name": "Y Ventures Group Ltd", "url": "https://yventures.com.sg/"},
     "alumniOf": [
       {"@type": "CollegeOrUniversity", "name": "Peking University"},
       {"@type": "CollegeOrUniversity", "name": "University of Washington"}
@@ -47,84 +44,169 @@
 </script>
 <style>
 :root{
-  --paper:#f7f8f6; --ink:#1e2a2f; --muted:#5e6b70; --line:#dadfdc; --accent:#2d5f57;
+  --paper:#ffffff;
+  --panel:#1a1f2b;
+  --panel-ink:#eef0f4;
+  --panel-muted:#9aa1b0;
+  --ink:#1a1f2b;
+  --muted:#6a6f7c;
+  --rule:#e7e4dd;
+  --gold:#a8895a;
+  --gold-soft:#c9ad7a;
   color-scheme:light;
   box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root{--paper:#141a1c; --ink:#e6ebe8; --muted:#9aa6a8; --line:#2c3639; --accent:#7fb5aa; color-scheme:dark;}
+  :root:not([data-theme="light"]){
+    --paper:#12151c; --panel:#0b0d12; --panel-ink:#eef0f4; --panel-muted:#8b92a1;
+    --ink:#e9ebf0; --muted:#9aa0ad; --rule:#262b36; --gold:#c9ad7a; --gold-soft:#d8c093;
+    color-scheme:dark;
+  }
 }
 *,*::before,*::after{box-sizing:inherit}
-html{background:var(--paper)}
+html{background:var(--paper); scroll-padding-top:env(safe-area-inset-top,0px)}
 body{
   margin:0; background:var(--paper); color:var(--ink);
-  font-family:"Newsreader", Georgia, "Times New Roman", serif;
-  font-size:1.1875rem; line-height:1.6; font-optical-sizing:auto;
-  -webkit-font-smoothing:antialiased;
+  font-family:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size:1.0625rem; line-height:1.65; -webkit-font-smoothing:antialiased;
 }
-main{max-width:38rem; margin:0 auto; padding:clamp(3rem,10vh,7rem) 1.5rem 4rem}
-.name{margin:0; font-weight:500; font-size:clamp(2.75rem,9vw,4.5rem); line-height:1; letter-spacing:-0.02em}
-.alias{
-  margin:.9rem 0 0; padding-left:.9rem; border-left:2px solid var(--accent);
-  font-size:1.375rem; line-height:1.3; color:var(--muted);
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:2px}
+
+.layout{display:grid; grid-template-columns:minmax(20rem, 42%) 1fr; min-height:100vh}
+
+/* Left: the name panel */
+.panel{
+  position:sticky; top:0; height:100vh;
+  background:var(--panel); color:var(--panel-ink);
+  display:flex; flex-direction:column; justify-content:space-between;
+  padding:calc(2.5rem + env(safe-area-inset-top,0px)) clamp(2rem,4.5vw,4rem) calc(2.5rem + env(safe-area-inset-bottom,0px));
+  overflow:hidden;
 }
-.alias span{color:var(--ink)}
-.role{margin:2.5rem 0 0; font-size:1.3125rem; line-height:1.55}
-h2{margin:3.25rem 0 .75rem; font-size:1rem; font-weight:600; color:var(--muted); letter-spacing:.01em}
-p{margin:0 0 1rem}
-dl{margin:0; border-top:1px solid var(--line)}
-dl div{display:grid; grid-template-columns:9.5rem 1fr; gap:1rem; padding:.7rem 0; border-bottom:1px solid var(--line)}
-dt{font-weight:500}
-dd{margin:0; color:var(--muted)}
-a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:.18em}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
-ul.links{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem 1.5rem}
-footer{margin-top:4rem; padding-top:1.25rem; border-top:1px solid var(--line); font-size:1rem; color:var(--muted)}
-@media (max-width:30rem){
-  body{font-size:1.0625rem}
-  dl div{grid-template-columns:1fr; gap:.15rem}
+.mark{font-family:"Parisienne", cursive; font-size:2.25rem; line-height:1; color:var(--gold-soft)}
+.who h1{
+  margin:0; font-family:"Cormorant Garamond", Georgia, serif; font-weight:400;
+  font-size:clamp(3.5rem, 7.2vw, 7rem); line-height:.92; letter-spacing:-0.015em;
+}
+.who h1 span{display:block}
+.who .aka{
+  margin:1.75rem 0 0; display:flex; align-items:center; gap:.9rem;
+  font-family:"Cormorant Garamond", Georgia, serif; font-style:italic; font-size:1.5rem; color:var(--panel-muted);
+}
+.who .aka::before{content:""; width:2.5rem; height:1px; background:var(--gold-soft)}
+.who .title{margin:2.25rem 0 0; max-width:22rem; color:var(--panel-muted); font-size:.98rem; line-height:1.6}
+.who .title strong{color:var(--panel-ink); font-weight:500}
+.panel .place{margin:0; font-size:.875rem; color:var(--panel-muted)}
+
+/* Right: the record */
+.content{padding:clamp(3rem,9vh,7rem) clamp(1.75rem,6vw,6rem) 4rem; max-width:46rem}
+.lede{
+  margin:0; font-family:"Cormorant Garamond", Georgia, serif; font-weight:400;
+  font-size:clamp(1.6rem, 2.4vw, 2.1rem); line-height:1.3; color:var(--ink);
+}
+.lede a{text-decoration:none; background-image:linear-gradient(var(--gold),var(--gold)); background-size:100% 1px; background-repeat:no-repeat; background-position:0 92%}
+.lede a:hover{color:var(--gold)}
+
+section{margin-top:4.5rem}
+h2{
+  margin:0 0 1.5rem; font-family:"Cormorant Garamond", Georgia, serif; font-style:italic; font-weight:400;
+  font-size:1.5rem; color:var(--gold);
+}
+.units{list-style:none; margin:0; padding:0; border-top:1px solid var(--rule)}
+.units li{border-bottom:1px solid var(--rule)}
+.units a{
+  display:grid; grid-template-columns:11rem 1fr; align-items:baseline; gap:1.25rem;
+  padding:1.05rem 0; text-decoration:none;
+}
+.units .n{font-weight:500}
+.units .d{color:var(--muted)}
+.units a:hover .n{color:var(--gold)}
+
+.edu{display:grid; grid-template-columns:1fr 1fr; gap:2rem}
+.edu p{margin:0}
+.edu .school{font-family:"Cormorant Garamond", Georgia, serif; font-size:1.45rem; line-height:1.2}
+.edu .deg{color:var(--muted); font-size:.95rem; margin-top:.3rem}
+
+.links{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.75rem}
+.links a{
+  display:inline-block; padding:.55rem 1.1rem; border:1px solid var(--rule); border-radius:999px;
+  text-decoration:none; font-size:.95rem; transition:border-color .2s, color .2s;
+}
+.links a:hover{border-color:var(--gold); color:var(--gold)}
+
+footer{margin-top:5rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.9rem}
+footer a{text-underline-offset:.2em; text-decoration-color:var(--gold)}
+
+/* One orchestrated load moment: the name rises in */
+@media (prefers-reduced-motion:no-preference){
+  .who h1 span{opacity:0; transform:translateY(14px); animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .who h1 span:nth-child(2){animation-delay:.08s}
+  .who h1 span:nth-child(3){animation-delay:.16s}
+  .who .aka, .who .title{opacity:0; animation:fade .8s ease .55s forwards}
+  @keyframes rise{to{opacity:1; transform:none}}
+  @keyframes fade{to{opacity:1}}
+}
+
+@media (max-width:56rem){
+  .layout{grid-template-columns:1fr}
+  .panel{position:relative; height:auto; min-height:auto; gap:3.5rem; padding-bottom:3rem}
+  .who h1{font-size:clamp(3.25rem, 15vw, 5rem)}
+  .content{padding-top:3rem}
+}
+@media (max-width:34rem){
+  .units a{grid-template-columns:1fr; gap:.1rem}
+  .edu{grid-template-columns:1fr; gap:1.25rem}
 }
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <h1 class="name">Low Yik Jin</h1>
-    <p class="alias">Also known as <span>Alex Low</span></p>
-  </header>
+<div class="layout">
+  <aside class="panel">
+    <div class="mark" aria-hidden="true">YJ</div>
+    <div class="who">
+      <h1><span>Low</span> <span>Yik</span> <span>Jin</span></h1>
+      <p class="aka">Alex Low</p>
+      <p class="title"><strong>Co-founder, CEO and Executive Director</strong><br>Y Ventures Group Ltd<br>Listed on SGX Catalist (1F1)</p>
+    </div>
+    <p class="place">Singapore</p>
+  </aside>
 
-  <p class="role">Co-founder, Chief Executive Officer and Executive Director of <a href="https://yventures.com.sg/">Y Ventures Group Ltd</a>, a Singapore-headquartered group listed on the SGX Catalist board (ticker 1F1).</p>
+  <main class="content">
+    <p class="lede">Co-founder and Chief Executive Officer of <a href="https://yventures.com.sg/">Y Ventures Group</a>, a Singapore-headquartered group building businesses across data, AI and services.</p>
 
-  <h2>Y Ventures Group</h2>
-  <p>The group runs five businesses across data, AI and services.</p>
-  <dl>
-    <div><dt><a href="https://yventures.com.sg/yv-enterprise/">YV Enterprise</a></dt><dd>E-commerce and marketplace enablement</dd></div>
-    <div><dt><a href="https://yventures.com.sg/yv-lab/">YV Lab</a></dt><dd>Technology, data and AI</dd></div>
-    <div><dt><a href="https://yventures.com.sg/yv-logistics/">YV Logistics</a></dt><dd>Logistics and freight forwarding</dd></div>
-    <div><dt><a href="https://yventures.com.sg/aip/">AIP</a></dt><dd>AI learning</dd></div>
-    <div><dt><a href="https://yventures.com.sg/junk-to-clear/">Junk To Clear</a></dt><dd>Environmental services</dd></div>
-  </dl>
+    <section aria-labelledby="group">
+      <h2 id="group">The group</h2>
+      <ul class="units">
+        <li><a href="https://yventures.com.sg/yv-enterprise/"><span class="n">YV Enterprise</span><span class="d">E-commerce and marketplace enablement</span></a></li>
+        <li><a href="https://yventures.com.sg/yv-lab/"><span class="n">YV Lab</span><span class="d">Technology, data and AI</span></a></li>
+        <li><a href="https://yventures.com.sg/yv-logistics/"><span class="n">YV Logistics</span><span class="d">Logistics and freight forwarding</span></a></li>
+        <li><a href="https://yventures.com.sg/aip/"><span class="n">AIP</span><span class="d">AI learning</span></a></li>
+        <li><a href="https://yventures.com.sg/junk-to-clear/"><span class="n">Junk To Clear</span><span class="d">Environmental services</span></a></li>
+      </ul>
+    </section>
 
-  <h2>Education</h2>
-  <dl>
-    <div><dt>Peking University</dt><dd>Master of Business Administration</dd></div>
-    <div><dt>University of Washington</dt><dd>Bachelor of Science</dd></div>
-  </dl>
+    <section aria-labelledby="edu">
+      <h2 id="edu">Education</h2>
+      <div class="edu">
+        <div><p class="school">Peking University</p><p class="deg">Master of Business Administration</p></div>
+        <div><p class="school">University of Washington</p><p class="deg">Bachelor of Science</p></div>
+      </div>
+    </section>
 
-  <h2>Elsewhere</h2>
-  <ul class="links">
-    <li><a href="https://www.linkedin.com/in/alexlowyj/" rel="me">LinkedIn</a></li>
-    <li><a href="https://www.crunchbase.com/person/low-yik-jin-alex" rel="me">Crunchbase</a></li>
-    <li><a href="https://yventures.com.sg/about-us/">Y Ventures board</a></li>
-    <li><a href="https://yikjin.com/" rel="me">Company record</a></li>
-  </ul>
+    <section aria-labelledby="else">
+      <h2 id="else">Elsewhere</h2>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/alexlowyj/" rel="me">LinkedIn</a></li>
+        <li><a href="https://www.crunchbase.com/person/low-yik-jin-alex" rel="me">Crunchbase</a></li>
+        <li><a href="https://yventures.com.sg/about-us/">Y Ventures board</a></li>
+        <li><a href="https://yikjin.com/" rel="me">Company record</a></li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>For business enquiries, please contact <a href="https://yventures.com.sg/contact-us/">Y Ventures Group</a>.</p>
-  </footer>
-</main>
+    <footer>
+      <p>For business enquiries, please contact <a href="https://yventures.com.sg/contact-us/">Y Ventures Group</a>.</p>
+    </footer>
+  </main>
+</div>
 </body>
 </html>
