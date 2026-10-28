@@ -11,7 +11,10 @@
 <meta property="og:description" content="Co-founder, CEO and Executive Director of Y Ventures Group Ltd (SGX Catalist: 1F1).">
 <meta property="og:url" content="https://lowyikjin.com/">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1f2b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23c9ad7a'%3EYJ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1f2b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
@@ -96,7 +99,10 @@ a:focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius
 .who .aka::before{content:""; width:2.5rem; height:1px; background:var(--gold-soft)}
 .who .title{margin:2.25rem 0 0; max-width:22rem; color:var(--panel-muted); font-size:.98rem; line-height:1.6}
 .who .title strong{color:var(--panel-ink); font-weight:500}
-.panel .place{margin:0; font-size:.875rem; color:var(--panel-muted)}
+.sites{display:flex; gap:1.5rem; margin:0; padding:0; list-style:none; font-size:.9rem}
+.sites a{color:var(--panel-muted); text-decoration:none; padding-bottom:.3rem; border-bottom:1px solid transparent; transition:color .2s, border-color .2s}
+.sites a:hover{color:var(--panel-ink)}
+.sites a[aria-current="page"]{color:var(--panel-ink); border-bottom-color:var(--gold-soft)}
 
 /* Right: the record */
 .content{padding:clamp(3rem,9vh,7rem) clamp(1.75rem,6vw,6rem) 4rem; max-width:46rem}
@@ -166,9 +172,9 @@ footer a{text-underline-offset:.2em; text-decoration-color:var(--gold)}
     <div class="who">
       <h1><span>Low</span> <span>Yik</span> <span>Jin</span></h1>
       <p class="aka">Alex Low</p>
-      <p class="title"><strong>Co-founder, CEO and Executive Director</strong><br>Y Ventures Group Ltd<br>Listed on SGX Catalist (1F1)</p>
+      <p class="title"><strong>Co-founder, CEO and Executive Director</strong><br>Y Ventures Group Ltd<br>Listed on SGX Catalist (1F1)<br>Singapore</p>
     </div>
-    <p class="place">Singapore</p>
+    <nav aria-label="Sites"><ul class="sites"><li><a href="https://lowyikjin.com/" aria-current="page">Profile</a></li><li><a href="https://yikjin.com/">Company record</a></li></ul></nav>
   </aside>
 
   <main class="content">
